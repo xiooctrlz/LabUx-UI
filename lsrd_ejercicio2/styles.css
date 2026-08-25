@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Freckle+Face&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'fira sans', sans-serif;
+}
+
+body {
+    background: url(Assets/imagen-back.jpg) center 0 no-repeat;
+    background-size: cover;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.837);
+    padding: 0 30px;
+}
+
+h1 {
+    font-family: 'freckle face', serif;
+    color: #f207d7;
+    font-size: 6rem;
+    text-align: center;
+    margin: 20px 0 20px 0;
+}
+
+.section-title {
+    font-family: 'freckle face', serif;
+    color: #f7b5ef;
+    font-size: 3rem;
+    margin: 20px 0 20px 0;
+}
+
+p {
+    font-size: 16px;
+    font-weight: 400;
+    font-style: normal;
+    margin: 20px 0 20px 0;
+    text-align: justify;
+}
+
+#principal-text {
+    font-size: 18px;
+    font-weight: 500;
+    font-style: normal;
+    margin: 20px 0 20px 0;
+    text-align: justify;
+    color: #f27ec3;
+}  
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+}
+
+.nav-bar {
+    display: flex;
+    justify-content: center;
+    gap: 100px;  
+    background-color: #f207d7;
+    padding: 20px 0;
+    text-transform: uppercase;
+
+
+    margin-bottom: 20px;
+}
+
+.nav-bar a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 500;
+    margin: 0 0;
+    font-family: 'fira sans', sans-serif;
+}
+
+.nav-bar a:hover {
+    color: #f0a4d1;
+}
