@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>LNGSHOT | Sitio de fans</title>
+        <meta name="description" content="Conoce a LNGSHOT, el primer grupo de chicos de MORE VISION: su historia, su discografía y una galería de fotos del grupo.">
+        <meta name="robots" content="index, follow">
+
+        <!-- Icono de la pestaña del navegador -->
+        <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+        <link rel="icon" type="image/png" sizes="48x48" href="assets/favicon-48.png">
+        <link rel="icon" type="image/png" sizes="192x192" href="assets/favicon-192.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon-180.png">
+
+        <link rel="stylesheet" type="text/css" href="styles.css">
+        <script src="script.js" defer></script>
+        <script src="https://kit.fontawesome.com/2464fc1421.js" crossorigin="anonymous" defer></script>
+
+        <!-- La imagen de fondo del banner - prioridad -->
+        <link rel="preload" as="image" href="assets/fondo-saucin.webp" type="image/webp" fetchpriority="high">
+
+        <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+        <script type="importmap">
+            {
+                "imports": {
+                    "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+                    "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+                }
+            }
+        </script>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&family=Sedgwick+Ave+Display&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Knewave&family=Rock+Salt&family=Londrina+Sketch&text=soul%20is%20in%20the%20struggle.SOUL%20IS%20IN%20THE%20STRUGGLE&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+
+        <!-- Cabecera principal del sitio -->
+        <header id="header-web">
+
+            <h1 class="hide">LNGSHOT, sitio de fans del grupo</h1>
+
+            <!-- Banner web con efecto parallax -->
+            <section class="banner" aria-label="Banner principal con los integrantes de LNGSHOT">
+                <img src="assets/fondo-saucin.webp" alt="Fondo de la locación del film del video de Sauncin' en Vietnam. Cielo nublado con torres eléctricas de alta tensión al fondo, sobre una carretera vacía." class="banner-fondo" decoding="async" fetchpriority="high">
+                <img src="assets/carro-personas-fondo.webp" alt="Extras del video de Sauncin' sentadas sobre un carro viejo volcado" class="capa capa-carro" data-parallax="0.25">
+                <img src="assets/ohyul.webp" alt="Ohyul, líder de LNGSHOT, con un pañuelo verde en la cabeza y ropa oscura" class="capa capa-ohyul" data-parallax="0.14">
+                <img src="assets/louis.webp" alt="Louis, maknee de LNGSHOT, saltando con ropa holgada" class="capa capa-louis" data-parallax="0.14">
+                <img src="assets/lngshot-nombre-principal.webp" alt="LNGSHOT, nombre del grupo en letras negras dibujadas a mano por ellos" class="banner-nombre">
+                <img src="assets/woojin-ryul.webp" alt="Woojin y Ryul, main dancer y main rapper respectivamente de LNGSHOT, en primer plano con gafas oscuras" class="capa capa-woojin-ryul">
+            </section>
+            <!-- Fin banner web -->
+
+            <!-- Navegador principal -->
+            <nav class="menu-principal" aria-label="Menú principal">
+                <a href="#sobre-el-grupo" class="btn-menu" lang="ko">소개</a>
+                <a href="#discografia" class="btn-menu" lang="ko">앨범</a>
+                <a href="#galeria" class="btn-menu" lang="ko">갤러리</a>
+            </nav>
+            <!-- Fin navegador principal -->
+
+        </header>
+        <!-- Fin cabecera principal del sitio -->
+
+
+        <!-- Contenido principal del sitio -->
+        <main>
+
+            <!-- Cita - collar 3D interactivo -->
+            <section class="cita-principal" aria-label="Frase del grupo y collar interactivo de LNGSHOT">
+                <!-- Collar 3D interactivo -->
+                <figure id="logo-3d-contenedor">
+                    <img src="assets/lngshot-logo-interactivo.webp" alt="Dije del collar de LNGSHOT: el nombre del grupo en letras blancas, colgado de una cadena tipo cubana plateada" id="logo-3d-respaldo">
+                    <canvas id="logo-3d-canvas" aria-label="Collar 3D de LNGSHOT con una gruesa cadena cubana plateada que rodea la frase. Se mueve con el cursor y se puede agarrar y arrastrar" role="img" hidden></canvas>
+                </figure>
+                <!-- Fin collar 3D interactivo -->
+
+                <blockquote lang="en">
+                    <p>“The rhytm is in our blood, but the <span class="fuente-acento">soul is in the struggle.</span>”</p>
+                </blockquote>
+            </section>
+            <!-- Fin cita - collar 3D interactivo -->
+
+            <!-- Sobre el grupo -->
+            <section id="sobre-el-grupo" class="sobre-el-grupo" aria-labelledby="titulo-sobre-el-grupo">
+                <h2 id="titulo-sobre-el-grupo" lang="ko">야, 뭐해?</h2>
+
+                <p class="sobre-el-grupo-texto" lang="ko">LNGSHOT은 박재범이 이끄는 MORE VISION의 첫 번째 보이그룹입니다. 2026년 1월 데뷔한 이들은 힙합을 기반으로 한 강렬한 사운드와 자유로운 에너지로 주목받고 있습니다. 정해진 틀에 머무르지 않고, 자신들만의 음악과 스타일로 K-POP의 새로운 길을 만들어 가고 있습니다. 무대 위에서는 자신감 넘치는 퍼포먼스로,</p>
+
+                <img src="assets/lngshot-foto-grupal-ojodepez.webp" alt="Foto grupal de los cuatro integrantes de LNGSHOT tomada con lente ojo de pez, desde arriba, en el film de Saucin'" class="sobre-el-grupo-foto" loading="lazy" decoding="async">
+            </section>
+            <!-- Fin sobre el grupo -->
+
+            <!-- Firmas en loop -->
+            <section class="firmas" aria-label="Firmas de los integrantes de LNGSHOT">
+                <div class="firmas-pista">
+                    <ul class="firmas-lista">
+                        <li><img src="assets/firma-louis.webp" alt="Firma de Louis"></li>
+                        <li><img src="assets/firma-ohyul.webp" alt="Firma de Ohyul"></li>
+                        <li><img src="assets/firma-ryul.webp" alt="Firma de Ryul"></li>
+                        <li><img src="assets/firma-woojin.webp" alt="Firma de Woojin"></li>
+                    </ul>
+                    <ul class="firmas-lista" aria-hidden="true">
+                        <li><img src="assets/firma-louis.webp" alt=""></li>
+                        <li><img src="assets/firma-ohyul.webp" alt=""></li>
+                        <li><img src="assets/firma-ryul.webp" alt=""></li>
+                        <li><img src="assets/firma-woojin.webp" alt=""></li>
+                    </ul>
+                </div>
+            </section>
+            <!-- Fin firmas en loop -->
+
+            <!-- Sobre el grupo - parte 2 -->
+            <section class="sobre-el-grupo-parte-2" aria-label="Más sobre LNGSHOT">
+                <p class="sobre-el-grupo-texto" lang="ko">무대 밖에서는 솔직한 모습으로 팬들과 소통합니다. 이제 막 시작된 그들의 이야기는 앞으로 더 큰 무대를 향해 나아갈 것입니다.</p>
+
+                <ul class="datos-grupo" lang="ko">
+                    <li>멤버 우진 · 류 · 오율 · 루이스</li>
+                    <li>소속 MORE VISION</li>
+                    <li>데뷔 2026.01</li>
+                </ul>
+
+                <!-- Humo que sale por detrás del carro -->
+                <canvas class="humo-carro" id="humo-carro" aria-hidden="true"></canvas>
+
+                <img src="assets/lngshot-en-carro.webp" alt="Cuatro integrantes de LNGSHOT dentro y encima de un carro en movimiento, sacada del film de Saucin'" class="carro-entra" id="carro-entra" loading="lazy" decoding="async">
+            </section>
+            <!-- Fin sobre el grupo - parte 2 -->
+
+            <!-- Discografía -->
+            <section id="discografia" class="discografia" aria-labelledby="titulo-discografia">
+                <h2 id="titulo-discografia" lang="ko">앨범</h2>
+
+                <div class="carrusel" id="carrusel-albumes" role="region" aria-roledescription="carrusel" aria-label="Álbumes de LNGSHOT">
+                    <ul class="carrusel-pista">
+                        <li class="album" data-album="1" data-nombre-album="S.W.I.S.H." data-cancion="Banana">
+                            <img src="assets/disco-vinilo.webp" alt="" class="album-disco">
+                            <button type="button" class="album-portada" aria-label="Ver el álbum S.W.I.S.H.">
+                                <img src="assets/swish-album-cover.webp" alt="Portada del álbum S.W.I.S.H. de LNGSHOT: cuatro integrantes vestidos de blanco sobre un fondo de atardecer">
+                            </button>
+                            <!-- Canción del álbum: Banana -->
+                            <audio class="album-audio" src="assets/audios/swish-album-audio-(banana).mp3" preload="none"></audio>
+                        </li>
+                        <li class="album" data-album="2" data-nombre-album="Training Day" data-cancion="Vanilla Days">
+                            <img src="assets/disco-vinilo.webp" alt="" class="album-disco">
+                            <button type="button" class="album-portada" aria-label="Ver el álbum Training Day">
+                                <img src="assets/training-day-album-cover.webp" alt="Portada del álbum Training Day de LNGSHOT: un mosaico de fotos de rostros con una nota adhesiva amarilla que dice LNGSHOT Training Day">
+                            </button>
+                            <!-- Canción del álbum: Vanilla Days -->
+                            <audio class="album-audio" src="assets/audios/training-day-album-audio-(vanilla-days).mp3" preload="none"></audio>
+                        </li>
+                        <li class="album" data-album="3" data-nombre-album="4ShoBoiz Mixtape" data-cancion="Are You Ready">
+                            <img src="assets/disco-vinilo.webp" alt="" class="album-disco">
+                            <button type="button" class="album-portada" aria-label="Ver el álbum 4ShoBoiz Mixtape">
+                                <img src="assets/mixtape-album-cover.webp" alt="Portada del mixtape 4ShoBoiz de LNGSHOT: dibujo hecho a mano de los integrantes con el texto 4ShoBoiz">
+                            </button>
+                            <!-- Canción del álbum: Are You Ready -->
+                            <audio class="album-audio" src="assets/audios/mixtape-album-audio-(are-you-ready).mp3" preload="none"></audio>
+                        </li>
+                        <li class="album" data-album="4" data-nombre-album="Shot Callers" data-cancion="Backseat">
+                            <img src="assets/disco-vinilo.webp" alt="" class="album-disco">
+                            <button type="button" class="album-portada" aria-label="Ver el álbum Shot Callers">
+                                <img src="assets/shot-callers-album-cover.webp" alt="Portada del álbum Shot Callers de LNGSHOT: cuatro integrantes con gafas futuristas y ropa azul metálica, con el título en rojo">
+                            </button>
+                            <!-- Canción del álbum: Backseat -->
+                            <audio class="album-audio" src="assets/audios/shot-callers-album-audio-(backseat).mp3" preload="none"></audio>
+                        </li>
+                        <li class="album" data-album="5" data-nombre-album="4ShoVille" data-cancion="Yeah Yeah">
+                            <img src="assets/disco-vinilo.webp" alt="" class="album-disco">
+                            <button type="button" class="album-portada" aria-label="Ver el álbum 4ShoVille">
+                                <img src="assets/4shoville-album-cover.webp" alt="Portada del álbum 4ShoVille de LNGSHOT: dibujo hecho por Woojin de los cuatro miembros y Jay Park en forma caricaturesca">
+                            </button>
+                            <!-- Canción del álbum: Yeah Yeah -->
+                            <audio class="album-audio" src="assets/audios/4shoville-album-audio-(yeah-yeah).mp3" preload="none"></audio>
+                        </li>
+                    </ul>
+
+                    <!-- Aviso para lectores de pantalla: qué canción suena -->
+                    <p class="hide" id="estado-reproduccion" role="status" aria-live="polite"></p>
+
+                    <!-- Puntos de seguimiento -->
+                    <div class="puntos" role="group" aria-label="Elegir álbum">
+                        <button type="button" class="punto" aria-label="Ir al álbum 1 de 5"></button>
+                        <button type="button" class="punto" aria-label="Ir al álbum 2 de 5"></button>
+                        <button type="button" class="punto" aria-label="Ir al álbum 3 de 5"></button>
+                        <button type="button" class="punto" aria-label="Ir al álbum 4 de 5"></button>
+                        <button type="button" class="punto" aria-label="Ir al álbum 5 de 5"></button>
+                    </div>
+                </div>
+            </section>
+            <!-- Fin discografía -->
+
+            <!-- Frase con video de fondo -->
+            <section class="cita-video" aria-label="Frase del grupo sobre un video">
+                <div class="cita-video-fondo">
+                    <video muted loop playsinline preload="none" poster="assets/video-ojo-pez-previsualizacion.webp" aria-hidden="true" tabindex="-1">
+                        <source src="assets/videos/video-ojo-pez-lngshot.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <blockquote lang="en">
+                    <p>“Taking a longshot against the odds isn’t just our name; it’s the only way we know how to play the game.”</p>
+                </blockquote>
+            </section>
+            <!-- Fin frase con video de fondo -->
+
+            <!-- Galería de imágenes -->
+            <section id="galeria" class="galeria" aria-labelledby="titulo-galeria">
+                <h2 id="titulo-galeria" lang="ko">갤러리</h2>
+
+                <div class="galeria-slides" id="galeria-slides" role="region" aria-roledescription="carrusel" aria-label="Fotos del grupo">
+
+                    <!-- Slide 1 -->
+                    <ul class="galeria-slide galeria-slide-1" aria-label="Página 1 de la galería">
+                        <li><button type="button" class="galeria-foto" data-imagen="assets/galeria-img/ampliadas/galeria-grupo-lngshot-2.webp" data-descripcion="Los cuatro integrantes de LNGSHOT de pie en un espacio industrial oscuro, con chalecos y ropa negra"><img src="assets/galeria-img/miniaturas/galeria-grupo-lngshot-2.webp" alt="Los cuatro integrantes de LNGSHOT de pie en un espacio industrial oscuro, con chalecos y ropa negra. Abrir imagen ampliada" loading="lazy" decoding="async"></button></li>
+                        <li><button type="button" class="galeria-foto" data-imagen="assets/galeria-img/ampliadas/galeria-grupo-lngshot-8.webp" data-descripcion="Integrantes de LNGSHOT en una sala moderna con grandes ventanales y un camino de luz en el piso; en primer plano, uno con pañuelo verde en la cabeza y sudadera oscura"><img src="assets/galeria-img/miniaturas/galeria-grupo-lngshot-8.webp" alt="Integrantes de LNGSHOT en una sala moderna con grandes ventanales y un camino de luz en el piso; en primer plano, uno con pañuelo verde en la cabeza y sudadera oscura. Abrir imagen ampliada" loading="lazy" decoding="async"></button></li>
+                        <li><button type="button" class="galeria-foto" data-imagen="assets/galeria-img/ampliadas/galeria-grupo-lngshot-4.webp" data-descripcion="Retrato de un integrante de LNGSHOT con gorra negra y chaqueta oscura, inclinado frente a un fondo rojo con luces"><img src="assets/galeria-img/miniaturas/galeria-grupo-lngshot-4.webp" alt="Retrato de un integrante de LNGSHOT con gorra negra y chaqueta oscura, inclinado frente a un fondo rojo con luces. Abrir imagen ampliada" loading="lazy" decoding="async"></button></li>
+                        <li><button type="button" class="galeria-foto" data-imagen="assets/galeria-img/ampliadas/galeria-grupo-lngshot-11.webp" data-descripcion="Cuatro integrantes de LNGSHOT muy juntos dentro de un círculo de luz azulada sobre fondo oscuro, en una foto de ojo de pez"><img src="assets/galeria-img/miniaturas/galeria-grupo-lngshot-11.webp" alt="Cuatro integrantes de LNGSHOT muy juntos dentro de un círculo de luz azulada sobre fondo oscuro, en una foto de ojo de pez. Abrir imagen ampliada" loading="lazy" decoding="async"></button></li>
+                        <li><button type="button" class="galeria-foto" data-imagen="assets/galeria-img/ampliadas/galeria-grupo-lngshot-1.webp" data-descripcion="Cuatro integrantes de LNGSHOT muy cerca de la cámara con gafas de sol blancas y ropa verde y blanca, sobre fondo negro"><img src="assets/galeria-img/miniaturas/galeria-grupo-lngshot-1.webp" alt="Cuatro integrantes de LNGSHOT muy cerca de la cámara con gafas de sol blancas y ropa verde y blanca, sobre fondo negro. Abrir imagen ampliada" loading="lazy" decoding="async"></button></li>
+                    </ul>
+
+                    <!-- Slide 2 -->
+                    <ul class="galeria-slide galeria-slide-2" aria-label="Página 2 de la galería">
+                        <li><button type="button" class="galeria-foto" data-imagen="assets/galeria-img/ampliadas/galeria-grupo-lngshot-3.webp" data-descripcion="Un integrante de LNGSHOT con gafas de sol y camiseta de camuflaje naranja, con la mano en la barbilla, de noche junto a una camioneta"><img src="assets/galeria-img/miniaturas/galeria-grupo-lngshot-3.webp" alt="Un integrante de LNGSHOT con gafas de sol y camiseta de camuflaje naranja, con la mano en la barbilla, de noche junto a una camioneta. Abrir imagen ampliada" loading="lazy" decoding="async"></button></li>
+                        <li><button type="button" class="galeria-foto" data-imagen="assets/galeria-img/ampliadas/galeria-grupo-lngshot-6.webp" data-descripcion="Los cuatro integrantes de LNGSHOT vestidos completamente de blanco, posando en una azotea al atardecer con el cielo azul y rosado"><img src="assets/galeria-img/miniaturas/galeria-grupo-lngshot-6.webp" alt="Los cuatro integrantes de LNGSHOT vestidos completamente de blanco, posando en una azotea al atardecer con el cielo azul y rosado. Abrir imagen ampliada" loading="lazy" decoding="async"></button></li>
+                        <li><button type="button" class="galeria-foto" data-imagen="assets/galeria-img/ampliadas/galeria-grupo-lngshot-12.webp" data-descripcion="Un integrante de LNGSHOT con chaqueta negra brillante y cadenas, de pie frente a un fondo azul claro"><img src="assets/galeria-img/miniaturas/galeria-grupo-lngshot-12.webp" alt="Un integrante de LNGSHOT con chaqueta negra brillante y cadenas, de pie frente a un fondo azul claro. Abrir imagen ampliada" loading="lazy" decoding="async"></button></li>
+                        <li><button type="button" class="galeria-foto" data-imagen="assets/galeria-img/ampliadas/galeria-grupo-lngshot-9.webp" data-descripcion="Cuatro siluetas negras de los integrantes de LNGSHOT de pie en un estudio gris con luz suave"><img src="assets/galeria-img/miniaturas/galeria-grupo-lngshot-9.webp" alt="Cuatro siluetas negras de los integrantes de LNGSHOT de pie en un estudio gris con luz suave. Abrir imagen ampliada" loading="lazy" decoding="async"></button></li>
+                    </ul>
+
+                    <!-- Slide 3 -->
+                    <ul class="galeria-slide galeria-slide-3" aria-label="Página 3 de la galería">
+                        <li><button type="button" class="galeria-foto" data-imagen="assets/galeria-img/ampliadas/galeria-grupo-lngshot-10.webp" data-descripcion="Un integrante de LNGSHOT con chaqueta morada y la mano sobre la boca, mirando hacia abajo, con una estructura de vidrio al fondo"><img src="assets/galeria-img/miniaturas/galeria-grupo-lngshot-10.webp" alt="Un integrante de LNGSHOT con chaqueta morada y la mano sobre la boca, mirando hacia abajo, con una estructura de vidrio al fondo. Abrir imagen ampliada" loading="lazy" decoding="async"></button></li>
+                        <li><button type="button" class="galeria-foto" data-imagen="assets/galeria-img/ampliadas/galeria-grupo-lngshot-13.webp" data-descripcion="Un integrante de LNGSHOT con gafas de sol y camiseta de camuflaje naranja, de pie de noche junto a una camioneta con luces de ciudad al fondo"><img src="assets/galeria-img/miniaturas/galeria-grupo-lngshot-13.webp" alt="Un integrante de LNGSHOT con gafas de sol y camiseta de camuflaje naranja, de pie de noche junto a una camioneta con luces de ciudad al fondo. Abrir imagen ampliada" loading="lazy" decoding="async"></button></li>
+                        <li><button type="button" class="galeria-foto" data-imagen="assets/galeria-img/ampliadas/galeria-grupo-lngshot-5.webp" data-descripcion="Un integrante de LNGSHOT con ropa blanca bordada y los brazos extendidos, visto desde abajo entre dos rascacielos y un cielo azul"><img src="assets/galeria-img/miniaturas/galeria-grupo-lngshot-5.webp" alt="Un integrante de LNGSHOT con ropa blanca bordada y los brazos extendidos, visto desde abajo entre dos rascacielos y un cielo azul. Abrir imagen ampliada" loading="lazy" decoding="async"></button></li>
+                        <li><button type="button" class="galeria-foto" data-imagen="assets/galeria-img/ampliadas/galeria-grupo-lngshot-11.webp" data-descripcion="Cuatro integrantes de LNGSHOT muy juntos dentro de un círculo de luz azulada sobre fondo oscuro, en una foto de ojo de pez"><img src="assets/galeria-img/miniaturas/galeria-grupo-lngshot-11.webp" alt="Cuatro integrantes de LNGSHOT muy juntos dentro de un círculo de luz azulada sobre fondo oscuro, en una foto de ojo de pez. Abrir imagen ampliada" loading="lazy" decoding="async"></button></li>
+                        <li><button type="button" class="galeria-foto" data-imagen="assets/galeria-img/ampliadas/galeria-grupo-lngshot-8.webp" data-descripcion="Integrantes de LNGSHOT en una sala moderna con grandes ventanales y un camino de luz en el piso; en primer plano, uno con pañuelo verde en la cabeza y sudadera oscura"><img src="assets/galeria-img/miniaturas/galeria-grupo-lngshot-8.webp" alt="Integrantes de LNGSHOT en una sala moderna con grandes ventanales y un camino de luz en el piso; en primer plano, uno con pañuelo verde en la cabeza y sudadera oscura. Abrir imagen ampliada" loading="lazy" decoding="async"></button></li>
+                        <li><button type="button" class="galeria-foto" data-imagen="assets/galeria-img/ampliadas/galeria-grupo-lngshot-2.webp" data-descripcion="Los cuatro integrantes de LNGSHOT de pie en un espacio industrial oscuro, con chalecos y ropa negra"><img src="assets/galeria-img/miniaturas/galeria-grupo-lngshot-2.webp" alt="Los cuatro integrantes de LNGSHOT de pie en un espacio industrial oscuro, con chalecos y ropa negra. Abrir imagen ampliada" loading="lazy" decoding="async"></button></li>
+                    </ul>
+
+                    <!-- Puntos de seguimiento -->
+                    <div class="puntos puntos-oscuros" role="group" aria-label="Elegir página de la galería">
+                        <button type="button" class="punto" aria-label="Ir a la página 1 de 3 de la galería"></button>
+                        <button type="button" class="punto" aria-label="Ir a la página 2 de 3 de la galería"></button>
+                        <button type="button" class="punto" aria-label="Ir a la página 3 de 3 de la galería"></button>
+                    </div>
+                </div>
+
+                <dialog class="galeria-ampliada" id="galeria-ampliada" aria-label="Imagen ampliada de la galería">
+                    <img src="" alt="" id="galeria-ampliada-img">
+                </dialog>
+            </section>
+            <!-- Fin galería de imágenes -->
+
+        </main>
+        <!-- Fin contenido principal del sitio -->
+
+
+        <!-- Pie de página -->
+        <footer id="footer">
+
+            <!-- Video en bucle del footer -->
+            <div class="footer-video">
+                <video muted loop playsinline preload="none" poster="assets/visualizer-4shoboiz-previsualizacion.webp" aria-hidden="true" tabindex="-1">
+                    <source src="assets/videos/visualizer-4shoboiz-mixtape-lngshot.mp4" type="video/mp4">
+                </video>
+            </div>
+
+            <div class="footer-informacion">
+                <p class="footer-copyright">&copy; 2026 Xio</p>
+
+                <p class="footer-legal" lang="ko">이 프로젝트는 학술적 목적의 프로젝트로, 순전히 교육 및 설명 목적으로 제작된 웹사이트입니다. 이 사이트는 비공식 사이트이며, Lngshot이나 More Vision과 어떠한 상업적 또는 공식적인 관계도 없습니다.</p>
+
+                <!-- Redes sociales -->
+                <ul class="footer-redes" aria-label="Redes sociales">
+                    <li><a href="https://open.spotify.com/intl-es/artist/2F4oTJOWkcD1JaTeKEa9h6?si=B7oJI61_SLO59ePof6ch7A" target="_blank" rel="noopener noreferrer" aria-label="Escuchar a LNGSHOT en Spotify"><i class="fa-brands fa-spotify" aria-hidden="true"></i></a></li>
+                    <li><a href="https://www.instagram.com/lngshot4sho?utm_source=ig_web_button_share_sheet&amp;vrfl=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer" aria-label="Ver el Instagram de LNGSHOT"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a></li>
+                    <li><a href="https://youtube.com/@lngshot4sho?si=4f9Qfomf0miJiPsO" target="_blank" rel="noopener noreferrer" aria-label="Ver el canal de YouTube de LNGSHOT"><i class="fa-brands fa-youtube" aria-hidden="true"></i></a></li>
+                </ul>
+            </div>
+
+        </footer>
+        <!-- Fin pie de página -->
+
+        <!-- Botón para ir arriba -->
+        <div class="ir-arriba">
+            <button type="button" class="btn-ir-arriba" aria-label="Volver arriba de la página">
+                <img src="assets/boton-ir-arriba-lngshot.webp" alt="" width="140" height="140">
+            </button>
+        </div>
+
+    </body>
+
+</html>
