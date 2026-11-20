@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>THE CIRCLE</title>
+    <meta name="description" content="THE CIRCLE — São Paulo, 2050. Not everything is meant to be found online." />
+    <link rel="icon" type="image/png" href="/images/pin-badge.png" />
+    <link rel="preload" href="/fonts/Satoshi-Black.otf" as="font" type="font/otf" crossorigin />
+    <link rel="preload" href="/fonts/Satoshi-Medium.otf" as="font" type="font/otf" crossorigin />
+  </head>
+  <body>
+    <!-- 3D layer: a single shared WebGL canvas used by every 3D scene -->
+    <div id="gl"></div>
+
+    <!-- DOM scenes are mounted here -->
+    <main id="stage" aria-live="polite"></main>
+
+    <!-- black curtain used for every cinematic fade -->
+    <div id="curtain" aria-hidden="true"></div>
+
+    <!-- persistent background-music control -->
+    <button id="sound-toggle" class="sound-toggle" type="button" aria-label="Mute music" aria-pressed="false">
+      <svg viewBox="0 0 32 32" aria-hidden="true">
+        <path class="spk" d="M5 12.5h4.5L16 7v18l-6.5-5.5H5z" />
+        <g class="waves">
+          <path d="M20 11.5c1.6 1.2 2.5 2.8 2.5 4.5s-.9 3.3-2.5 4.5" />
+          <path d="M23.2 8.5c2.6 2 4.1 4.6 4.1 7.5s-1.5 5.5-4.1 7.5" />
+        </g>
+        <g class="mute-x">
+          <path d="M20.5 12.5l7 7M27.5 12.5l-7 7" />
+        </g>
+      </svg>
+    </button>
+
+    <!-- loading screen -->
+    <div id="loader" class="loader">
+      <img class="loader__mark" src="/images/logo-symbol.png" alt="" />
+      <div class="loader__bar"><span></span></div>
+      <p class="loader__label">Preparing your invitation</p>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
